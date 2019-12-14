@@ -1,4 +1,3 @@
-class Stock < ApplicationRecord
 
   class Stock < ApplicationRecord
   has_many :user_stocks
@@ -20,5 +19,4 @@ class Stock < ApplicationRecord
       return nil
     end
   end
-end
 end
