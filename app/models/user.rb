@@ -41,15 +41,15 @@ class User < ApplicationRecord
   end
 
   def self.last_name_matches(param)
-    matches('last_name',param)
+    matches('last_name', param)
   end
 
   def self.email_matches(param)
-    matches('email',param)
+    matches('email', param)
   end
 
   def self.matches(field_name, param)
-    User.where("#{field_name} like ?", "%#{param}%")
+    where("#{field_name} like ?", "%#{param}%")
   end
 
 end
